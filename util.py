@@ -6,7 +6,7 @@ def load_saved_artifacts():
     global __books
 
     with open("./names.json", "r") as f:
-        __data_columns = json.load(f)['books']
+        __books = json.load(f)['books']
     
     print("loading saved artifacts...done")
 
@@ -18,4 +18,4 @@ def get_data_columns():
 
 if __name__ == '__main__':
     load_saved_artifacts()
-    print(get_data_columns())
+    print(get_book_names())
